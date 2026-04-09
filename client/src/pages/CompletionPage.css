@@ -1,0 +1,60 @@
+.completion-page {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow: hidden;
+}
+
+.confetti-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.completion-content {
+  text-align: center;
+  z-index: 20;
+  padding: 2rem;
+}
+
+.completion-icon {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  animation: pulse 1.5s ease infinite;
+}
+
+.completion-title {
+  font-family: var(--font-timer);
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.completion-routine-name {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.25rem;
+}
+
+.completion-message {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-bottom: 2.5rem;
+}
+
+.completion-home-btn {
+  padding: 1rem 2.5rem;
+  font-size: 1.1rem;
+}

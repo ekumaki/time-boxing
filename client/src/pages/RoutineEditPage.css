@@ -1,0 +1,168 @@
+.edit-page {
+  padding-bottom: 2rem;
+}
+
+.form-section {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+.total-time {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent-primary);
+}
+
+/* テーマセレクター */
+.theme-selector {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.theme-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.75rem 0.5rem;
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  background: var(--bg-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-option.selected {
+  border-color: var(--accent-primary);
+  background: var(--bg-card-hover);
+  box-shadow: 0 0 12px rgba(99, 179, 237, 0.2);
+}
+
+.theme-option:hover {
+  border-color: var(--accent-primary);
+}
+
+.theme-emoji {
+  font-size: 1.5rem;
+}
+
+.theme-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* タスクリスト */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.task-item {
+  padding: 0.75rem;
+}
+
+.task-item-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.task-number {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+  color: var(--btn-primary-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.task-move-btns {
+  display: flex;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.task-delete {
+  color: var(--danger);
+}
+
+.task-delete:disabled {
+  opacity: 0.3;
+}
+
+.task-name-input {
+  margin-bottom: 0.5rem;
+}
+
+.task-time-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.task-time-input {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex: 1;
+}
+
+.time-input {
+  width: 80px;
+  text-align: center;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.time-label {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* タスク追加ボタン */
+.add-task-btn {
+  width: 100%;
+  padding: 0.75rem;
+  border: 2px dashed var(--border-color);
+  border-radius: 12px;
+  font-size: 0.95rem;
+}
+
+/* 保存ボタン */
+.save-btn {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.save-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
