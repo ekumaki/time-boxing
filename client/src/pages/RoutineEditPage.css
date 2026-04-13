@@ -1,3 +1,7 @@
+.edit-title {
+  color: var(--accent-primary);
+}
+
 .edit-page {
   padding-bottom: 2rem;
 }
@@ -32,41 +36,97 @@
 /* テーマセレクター */
 .theme-selector {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 0.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
 }
 
 .theme-option {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.3rem;
-  padding: 0.75rem 0.5rem;
+  padding: 1rem 0.5rem;
   border: 2px solid var(--border-color);
-  border-radius: 12px;
-  background: var(--bg-secondary);
+  border-radius: 14px;
   cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.theme-option.selected {
-  border-color: var(--accent-primary);
-  background: var(--bg-card-hover);
-  box-shadow: 0 0 12px rgba(99, 179, 237, 0.2);
+  transition: all 0.25s ease;
+  min-height: 60px;
 }
 
 .theme-option:hover {
-  border-color: var(--accent-primary);
+  transform: scale(1.03);
 }
 
-.theme-emoji {
-  font-size: 1.5rem;
+.theme-option:active {
+  transform: scale(0.97);
 }
 
 .theme-label {
-  font-size: 0.75rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+/* === ライト === */
+.theme-option[data-theme-preview="light"] {
+  background: #f5f7fa;
+  border-color: #d0e8f2;
+}
+.theme-option[data-theme-preview="light"] .theme-label {
+  color: #00c6d7;
+  font-family: 'Inter', sans-serif;
+}
+.theme-option[data-theme-preview="light"].selected {
+  border-color: #00c6d7;
+  box-shadow: 0 0 14px rgba(0, 198, 215, 0.3);
+}
+
+/* === ネオン (dark) === */
+.theme-option[data-theme-preview="dark"] {
+  background: #0a0a1a;
+  border-color: #1a1a3e;
+}
+.theme-option[data-theme-preview="dark"] .theme-label {
+  color: #00ffff;
+  font-family: 'Orbitron', monospace;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6), 0 0 20px rgba(0, 255, 255, 0.3);
+}
+.theme-option[data-theme-preview="dark"].selected {
+  border-color: #00ffff;
+  box-shadow: 0 0 16px rgba(0, 255, 255, 0.4), inset 0 0 12px rgba(0, 255, 255, 0.05);
+}
+
+/* === ポップ === */
+.theme-option[data-theme-preview="pop"] {
+  background: #fce4ec;
+  border-color: #f3c4d8;
+}
+.theme-option[data-theme-preview="pop"] .theme-label {
+  color: #7c3aed;
+  font-family: 'Fredoka', sans-serif;
+  font-size: 1.15rem;
+}
+.theme-option[data-theme-preview="pop"].selected {
+  border-color: #a78bfa;
+  box-shadow: 0 0 14px rgba(167, 139, 250, 0.35);
+}
+
+/* === ロック === */
+.theme-option[data-theme-preview="rock"] {
+  background: #2d1b4e;
+  border-color: #4d3b6e;
+}
+.theme-option[data-theme-preview="rock"] .theme-label {
+  font-family: 'Bangers', cursive;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  background: linear-gradient(135deg, #ff3366, #ff6644, #ffe066);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.theme-option[data-theme-preview="rock"].selected {
+  border-color: #ff3366;
+  box-shadow: 0 0 16px rgba(255, 51, 102, 0.4);
 }
 
 /* タスクリスト */

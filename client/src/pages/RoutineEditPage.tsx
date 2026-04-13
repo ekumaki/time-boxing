@@ -17,11 +17,11 @@ interface TaskForm {
   seconds: number;
 }
 
-const THEMES: { id: ThemeType; label: string; emoji: string }[] = [
-  { id: 'light', label: 'ライト', emoji: '☀️' },
-  { id: 'dark', label: 'ダーク', emoji: '🌙' },
-  { id: 'pop', label: 'ポップ', emoji: '🍬' },
-  { id: 'rock', label: 'ロック', emoji: '🔥' },
+const THEMES: { id: ThemeType; label: string }[] = [
+  { id: 'light', label: 'ライト' },
+  { id: 'dark', label: 'ネオン' },
+  { id: 'pop', label: 'ポップ' },
+  { id: 'rock', label: 'ロック' },
 ];
 
 let tempIdCounter = 0;
@@ -118,7 +118,7 @@ export function RoutineEditPage({ routine, onSave, onBack }: RoutineEditPageProp
         <button className="btn-icon" onClick={onBack} aria-label="戻る" id="edit-back-btn">
           ←
         </button>
-        <h1 className="page-title">{isEditing ? 'ルーチン編集' : 'ルーチン作成'}</h1>
+        <h1 className="page-title edit-title">{isEditing ? 'ルーチン編集' : 'ルーチン作成'}</h1>
         <div style={{ width: 48 }} />
       </header>
 
@@ -148,7 +148,6 @@ export function RoutineEditPage({ routine, onSave, onBack }: RoutineEditPageProp
               onClick={() => setTheme(t.id)}
               id={`theme-${t.id}`}
             >
-              <span className="theme-emoji">{t.emoji}</span>
               <span className="theme-label">{t.label}</span>
             </button>
           ))}

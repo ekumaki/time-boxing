@@ -45,10 +45,10 @@ export function HomePage({ onNavigateToTimer, onNavigateToEdit, onNavigateToSett
   };
 
   const themeLabels: Record<string, string> = {
-    light: '☀️ ライト',
-    dark: '🌙 ダーク',
-    pop: '🍬 ポップ',
-    rock: '🔥 ロック',
+    light: 'ライト',
+    dark: 'ネオン',
+    pop: 'ポップ',
+    rock: 'ロック',
   };
 
   return (
